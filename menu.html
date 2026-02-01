@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kudil Suvai • Menu</title>
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/menu.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="header">
+    <div class="container topbar">
+
+      <a class="brand" href="index.html" aria-label="Kudil Suvai Home">
+        <div class="logoMark"></div>
+        <div class="brandText">
+          <b>Kudil Suvai</b>
+          <small>Erode • Perundurai Road</small>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a class="active" href="menu.html">Menu</a>
+        <a href="cart.html">Cart</a>
+        <a class="navBtn" href="login.html">Logout</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- RESTAURANT HEADER -->
+    <section class="restBar" aria-label="Restaurant info">
+      <div class="restLeft">
+        <h1>Kudil Suvai</h1>
+        <p>South Indian • Indo-Chinese • Bakery/Desserts</p>
+        <span>Erode • Perundurai Road</span>
+      </div>
+
+      <div class="restStats">
+        <div class="stat">
+          <b>4.4★</b>
+          <small>Ratings</small>
+        </div>
+        <div class="stat">
+          <b>25–40</b>
+          <small>mins</small>
+        </div>
+        <div class="stat">
+          <b>₹180</b>
+          <small>for one</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEARCH + FILTER BAR (UI only) -->
+    <section class="menuTools" aria-label="Search and filters">
+      <div class="searchBox">
+        <input type="search" placeholder="Search dosa, fried rice, coffee..." />
+        <a class="btn primary" href="#tiffin" style="padding:.55rem 1rem;">Search</a>
+      </div>
+
+      <div class="filterRow">
+        <a class="filterChip active" href="#">All</a>
+        <a class="filterChip" href="#">Veg</a>
+        <a class="filterChip" href="#">Non-Veg</a>
+        <a class="filterChip" href="#">Bestseller</a>
+      </div>
+    </section>
+
+    <!-- CATEGORY ICON ROW -->
+    <section class="catRow" aria-label="Categories">
+      <a class="catBubble" href="#tiffin">
+        <div class="catImgWrap"><img src="assets/categories/tiffin.jpg" alt="Tiffin"></div>
+        <span>Tiffin</span>
+      </a>
+
+      <a class="catBubble" href="#meals">
+        <div class="catImgWrap"><img src="assets/categories/meals.jpg" alt="Meals"></div>
+        <span>Meals</span>
+      </a>
+
+      <a class="catBubble" href="#starters">
+        <div class="catImgWrap"><img src="assets/categories/starters.jpg" alt="Starters"></div>
+        <span>Starters</span>
+      </a>
+
+      <a class="catBubble" href="#wok">
+        <div class="catImgWrap"><img src="assets/categories/wok.jpg" alt="Indo-Chinese"></div>
+        <span>Wok</span>
+      </a>
+
+      <a class="catBubble" href="#beverages">
+        <div class="catImgWrap"><img src="assets/categories/beverages.jpg" alt="Beverages"></div>
+        <span>Drinks</span>
+      </a>
+
+      <a class="catBubble" href="#desserts">
+        <div class="catImgWrap"><img src="assets/categories/desserts.jpg" alt="Desserts"></div>
+        <span>Desserts</span>
+      </a>
+
+      <a class="catBubble" href="#combos">
+        <div class="catImgWrap"><img src="assets/categories/combos.jpg" alt="Combos"></div>
+        <span>Combos</span>
+      </a>
+    </section>
+
+    <!-- TIFFIN -->
+    <section class="section" id="tiffin" aria-label="Tiffin classics">
+      <div class="sectionTitle">
+        <h2>Tiffin Classics</h2>
+        <span>Breakfast comfort • Light spice</span>
+      </div>
+
+      <div class="grid">
+        <article class="foodCard">
+          <div class="foodMedia"><img src="assets/dishes/idly.jpg" alt="Idli"></div>
+          <div class="foodTop">
+            <h3>Idli</h3>
+            <div class="price">₹55</div>
+          </div>
+          <div class="meta">
+            <span class="tag veg">Veg</span>
+            <span class="tag">Bestseller</span>
+            <span class="tag">Spice: ○○○</span>
+          </div>
+          <p class="desc">Soft idli served with chutney + sambar.</p>
+          <div class="actions">
+            <button class="btn primary" type="button">Add</button>
+            <span class="qtyHint">Serves 1</span>
+          </div>
+        </article>
+
+        <article class="foodCard">
+          <div class="foodMedia"><img src="assets/dishes/masaladosa.jpg" alt="Masala Dosa"></div>
+          <div class="foodTop">
+            <h3>Masala Dosa</h3>
+            <div class="price">₹95</div>
+          </div>
+          <div class="meta">
+            <span class="tag veg">Veg</span>
+            <span class="tag">Crispy</span>
+            <span class="tag">Spice: ●○○</span>
+          </div>
+          <p class="desc">Crisp roast dosa with spiced potato masala.</p>
+          <div class="actions">
+            <button class="btn primary" type="button">Add</button>
+            <span class="qtyHint">Serves 1</span>
+          </div>
+        </article>
+
+        <article class="foodCard">
+          <div class="foodMedia"><img src="assets/dishes/gheeroast.jpg" alt="Ghee Roast"></div>
+          <div class="foodTop">
+            <h3>Ghee Roast</h3>
+            <div class="price">₹110</div>
+          </div>
+          <div class="meta">
+            <span class="tag veg">Veg</span>
+            <span class="tag">Crispy</span>
+            <span class="tag">Spice: ●○○</span>
+          </div>
+          <p class="desc">Golden roast with rich ghee aroma.</p>
+          <div class="actions">
+            <button class="btn primary" type="button">Add</button>
+            <span class="qtyHint">Serves 1</span>
+          </div>
+        </article>
+
+        <article class="foodCard">
+          <div class="foodMedia"><img src="assets/dishes/meduvada.jpg" alt="Medu Vada"></div>
+          <div class="foodTop">
+            <h3>Medu Vada</h3>
+            <div class="price">₹60</div>
+          </div>
+          <div class="meta">
+            <span class="tag veg">Veg</span>
+            <span class="tag">Crispy</span>
+            <span class="tag">Spice: ●○○</span>
+          </div>
+          <p class="desc">Crisp outside, soft inside. Perfect with chutney.</p>
+          <div class="actions">
+            <button class="btn primary" type="button">Add</button>
+            <span class="qtyHint">2 pcs</span>
+          </div>
+        </article>
+
+        <article class="foodCard">
+          <div class="foodMedia"><img src="assets/dishes/pongal.jpg" alt="Pongal"></div>
+          <div class="foodTop">
+            <h3>Pongal</h3>
+            <div class="price">₹75</div>
+          </div>
+          <div class="meta">
+            <span class="tag veg">Veg</span>
+            <span class="tag">Hearty</span>
+            <span class="tag">Spice: ●○○</span>
+          </div>
+          <p class="desc">Pepper-cumin ven pongal with ghee warmth.</p>
+          <div class="actions">
+            <button class="btn primary" type="button">Add</button>
+            <span class="qtyHint">Serves 1</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- MEALS -->
+    <section class="section" id="meals" aria-label="Meals and rice">
+      <div class="sectionTitle">
+        <h2>Meals & Rice</h2>
+        <span>Traditional • Filling</span>
+      </div>
+
+      <div class="grid">
+        <article class="foodCard">
+          <div class="foodMedia"><img src="assets/dishes/vegminithali.jpg" alt="Veg Mini Thali"></div>
+          <div class="foodTop">
+            <h3>Veg Mini Thali</h3>
+            <div class="price">₹140</div>
+          </div>
+          <div class="meta">
+            <span class="tag veg">Veg</span>
+            <span class="tag">Balanced</span>
+          </div>
+          <p class="desc">Rice + sambar + poriyal + curd.</p>
+          <div class="actions"><button class="btn primary" type="button">Add</button><span class="qtyHint">Serves 1</span></div>
+        </article>
+
+        <article class="foodCard">
+          <div class="foodMedia"><img src="assets/dishes/vegmaxithali.jpg" alt="Veg Maxi Thali"></div>
+          <div class="foodTop">
+            <h3>Veg Maxi Thali</h3>
+            <div class="price">₹180</div>
+          </div>
+          <div class="meta">
+            <span class="tag veg">Veg</span>
+            <span class="tag">Full Meals</span>
+          </div>
+          <p class="desc">Bigger meals plate with richer variety.</p>
+          <div class="actions"><button class="btn primary" type="button">Add</button><span class="qtyHint">Serves 1</span></div>
+        </article>
+
+        <article class="foodCard">
+          <div class="foodMedia"><img src="assets/dishes/sambharrice.jpg" alt="Sambar Rice"></div>
+          <div class="foodTop">
+            <h3>Sambar Rice</h3>
+            <div class="price">₹90</div>
+          </div>
+          <div class="meta">
+            <span class="tag veg">Veg</span>
+            <span class="tag">Comfort</span>
+          </div>
+          <p class="desc">Thick sambar mixed rice — simple and satisfying.</p>
+          <div class="actions"><button class="btn primary" type="button">Add</button><span class="qtyHint">Serves 1</span></div>
+        </article>
+
+        <article class="foodCard">
+          <div class="foodMedia"><img src="assets/dishes/curdrice.jpg" alt="Curd Rice"></div>
+          <div class="foodTop">
+            <h3>Curd Rice</h3>
+            <div class="price">₹85</div>
+          </div>
+          <div class="meta">
+            <span class="tag veg">Veg</span>
+            <span class="tag">Cooling</span>
+          </div>
+          <p class="desc">Soothing curd rice with a calm finish.</p>
+          <div class="actions"><button class="btn primary" type="button">Add</button><span class="qtyHint">Serves 1</span></div>
+        </article>
+
+        <article class="foodCard">
+          <div class="foodMedia"><img src="assets/dishes/nonvegmeals.jpg" alt="Non Veg Meals"></div>
+          <div class="foodTop">
+            <h3>Non-Veg Meals</h3>
+            <div class="price">₹220</div>
+          </div>
+          <div class="meta">
+            <span class="tag nveg">Non-Veg</span>
+            <span class="tag">Bold</span>
+          </div>
+          <p class="desc">Meals with non-veg gravy + sides.</p>
+          <div class="actions"><button class="btn primary" type="button">Add</button><span class="qtyHint">Serves 1</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- STARTERS -->
+    <section class="section" id="starters" aria-label="Starters">
+      <div class="sectionTitle">
+        <h2>Starters</h2>
+        <span>Crispy • Snackable</span>
+      </div>
+
+      <div class="grid">
+        <article class="foodCard">
+          <div class="foodMedia"><img src="assets/dishes/gobimanchurian.jpg" alt="Gobi Manchurian"></div>
+          <div class="foodTop">
+            <h3>Gobi Manchurian</h3>
+            <div class="price">₹120</div>
+          </div>
+          <div class="meta">
+            <span class="tag veg">Veg</span>
+            <span class="tag">Spice: ●●●</span>
+          </div>
+          <p class="desc">Crisp florets tossed in spicy sauce.</p>
+          <div class="actions"><button class="btn primary" type="button">Add</button><span class="qtyHint">Starter</span></div>
+        </article>
+
+        <article class="foodCard">
+          <div class="foodMedia"><img src="assets/dishes/paneertikka.jpg" alt="Paneer Tikka"></div>
+          <div class="foodTop">
+            <h3>Paneer Tikka</h3>
+            <div class="price">₹180</div>
+          </div>
+          <div class="meta">
+            <span class="tag veg">Veg</span>
+            <span class="tag">Smoky</span>
+          </div>
+          <p class="desc">Charred paneer cubes with gentle spice.</p>
+          <div class="actions"><button class="btn primary" type="button">Add</button><span class="qtyHint">Starter</span></div>
+        </article>
+
+        <article class="foodCard">
+          <div class="foodMedia"><img src="assets/dishes/chicken65.jpg" alt="Chicken 65"></div>
+          <div class="foodTop">
+            <h3>Chicken 65</h3>
+            <div class="price">₹200</div>
+          </div>
+          <div class="meta">
+            <span class="tag nveg">Non-Veg</span>
+            <span class="tag">Spice: ●●●</span>
+          </div>
+          <p class="desc">Erode-style spicy fried chicken starter.</p>
+          <div class="actions"><button class="btn primary" type="button">Add</button><span class="qtyHint">Starter</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- WOK -->
+    <section class="section" id="wok" aria-label="Indo-Chinese">
+      <div class="sectionTitle">
+        <h2>Wok / Indo-Chinese</h2>
+        <span>Smoky • Fast • Cravings</span>
+      </div>
+
+      <div class="grid">
+        <article class="foodCard">
+          <div class="foodMedia"><img src="assets/dishes/hakkanoodles.jpg" alt="Hakka Noodles"></div>
+          <div class="foodTop"><h3>Hakka Noodles</h3><div class="price">₹130</div></div>
+          <div class="meta"><span class="tag veg">Veg</span><span class="tag">Smoky</span></div>
+          <p class="desc">Wok tossed noodles with garlic punch.</p>
+          <div class="actions"><button class="btn primary" type="button">Add</button><span class="qtyHint">Serves 1</span></div>
+        </article>
+
+        <article class="foodCard">
+          <div class="foodMedia"><img src="assets/dishes/friedrice.jpg" alt="Fried Rice"></div>
+          <div class="foodTop"><h3>Fried Rice</h3><div class="price">₹140</div></div>
+          <div class="meta"><span class="tag veg">Veg</span><span class="tag">Hearty</span></div>
+          <p class="desc">Grain-separated fried rice with veggies.</p>
+          <div class="actions"><button class="btn primary" type="button">Add</button><span class="qtyHint">Serves 1</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- BEVERAGES -->
+    <section class="section" id="beverages" aria-label="Beverages">
+      <div class="sectionTitle">
+        <h2>Beverages</h2>
+        <span>Cooling • Refreshing</span>
+      </div>
+
+      <div class="grid">
+        <article class="foodCard">
+          <div class="foodMedia"><img src="assets/dishes/coffee.jpg" alt="Coffee"></div>
+          <div class="foodTop"><h3>Filter Coffee</h3><div class="price">₹35</div></div>
+          <div class="meta"><span class="tag veg">Veg</span><span class="tag">Classic</span></div>
+          <p class="desc">South Indian filter coffee with bold aroma.</p>
+          <div class="actions"><button class="btn primary" type="button">Add</button><span class="qtyHint">Hot</span></div>
+        </article>
+
+        <article class="foodCard">
+          <div class="foodMedia"><img src="assets/dishes/rosemilk.jpg" alt="Rose Milk"></div>
+          <div class="foodTop"><h3>Rose Milk</h3><div class="price">₹55</div></div>
+          <div class="meta"><span class="tag veg">Veg</span><span class="tag">Cooling</span></div>
+          <p class="desc">Chilled rose milk — sweet and refreshing.</p>
+          <div class="actions"><button class="btn primary" type="button">Add</button><span class="qtyHint">Cold</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- DESSERTS -->
+    <section class="section" id="desserts" aria-label="Desserts">
+      <div class="sectionTitle">
+        <h2>Desserts / Bakery</h2>
+        <span>Sweet • Indulgent</span>
+      </div>
+
+      <div class="grid">
+        <article class="foodCard">
+          <div class="foodMedia"><img src="assets/dishes/brwnie.jpg" alt="Brownie"></div>
+          <div class="foodTop"><h3>Brownie</h3><div class="price">₹120</div></div>
+          <div class="meta"><span class="tag veg">Veg</span><span class="tag">Chocolate</span></div>
+          <p class="desc">Dense chocolate brownie — rich and satisfying.</p>
+          <div class="actions"><button class="btn primary" type="button">Add</button><span class="qtyHint">Dessert</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMBOS -->
+    <section class="section" id="combos" aria-label="Combos">
+      <div class="sectionTitle">
+        <h2>Combos</h2>
+        <span>Value • Best sellers</span>
+      </div>
+
+      <div class="grid">
+        <article class="foodCard">
+          <div class="foodMedia"><img src="assets/dishes/vegminithali.jpg" alt="Tiffin Combo"></div>
+          <div class="foodTop"><h3>Tiffin Combo</h3><div class="price">₹149</div></div>
+          <div class="meta"><span class="tag veg">Veg</span><span class="tag">Value</span></div>
+          <p class="desc">Idli + Vada + Coffee (combo offer).</p>
+          <div class="actions"><button class="btn primary" type="button">Add</button><span class="qtyHint">Combo</span></div>
+        </article>
+
+        <article class="foodCard">
+          <div class="foodMedia"><img src="assets/dishes/nonvegmeals.jpg" alt="Lunch Combo"></div>
+          <div class="foodTop"><h3>Lunch Combo</h3><div class="price">₹269</div></div>
+          <div class="meta"><span class="tag nveg">Non-Veg</span><span class="tag">Value</span></div>
+          <p class="desc">Meals + starter + beverage (value pack).</p>
+          <div class="actions"><button class="btn primary" type="button">Add</button><span class="qtyHint">Combo</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sticky cart bar -->
+    <section class="cartBar" aria-label="Cart preview">
+      <div>
+        <b>Ready to checkout?</b>
+        <span>Open cart to adjust qty and confirm totals.</span>
+      </div>
+      <a class="btn primary" href="cart.html">Go to Cart</a>
+    </section>
+
+    <footer class="footer">
+      <p>© Kudil Suvai • Menu browsing • Single restaurant commerce UI</p>
+    </footer>
+
+  </main>
+
+</body>
+</html>

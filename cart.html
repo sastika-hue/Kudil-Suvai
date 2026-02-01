@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kudil Suvai • Cart</title>
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/cart.css" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="header">
+    <div class="container topbar">
+      <a class="brand" href="index.html">
+        <div class="logoMark"></div>
+        <div class="brandText">
+          <b>Kudil Suvai</b>
+          <small>Erode • Perundurai Road</small>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a class="active" href="cart.html">Cart</a>
+        <a class="navBtn" href="login.html">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="cartHead">
+      <div>
+        <h1>Your Cart</h1>
+        <p>Review items, update quantity, and proceed to checkout.</p>
+      </div>
+      <span class="badge">Delivery fee waived above ₹300</span>
+    </section>
+
+    <section class="cartLayout">
+      <!-- Cart Items -->
+      <section class="card panel" aria-label="Cart items">
+        <h2>Items</h2>
+
+        <div class="cartList">
+          <!-- Item 1 -->
+          <article class="cartItem" data-price="95">
+            <div class="thumb">
+              <img src="assets/dishes/masaladosa" alt="Masala Dosa">
+            </div>
+
+            <div class="itemMain">
+              <div class="itemTitle">
+                <b>Masala Dosa</b>
+                <small>Crispy roast • Potato masala</small>
+                <div class="meta">
+                  <span class="tag veg">Veg</span>
+                  <span class="tag">Bestseller</span>
+                </div>
+              </div>
+
+              <div class="itemRight">
+                <div class="price">₹95</div>
+                <div class="qty">
+                  <button class="minus" type="button">−</button>
+                  <span>1</span>
+                  <button class="plus" type="button">+</button>
+                </div>
+                <button class="removeBtn" type="button">Remove</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 2 -->
+          <article class="cartItem" data-price="200">
+            <div class="thumb">
+              <img src="assets/dishes/chicken65" alt="Chicken 65">
+            </div>
+
+            <div class="itemMain">
+              <div class="itemTitle">
+                <b>Chicken 65</b>
+                <small>Spicy starter • Erode style</small>
+                <div class="meta">
+                  <span class="tag nveg">Non-Veg</span>
+                  <span class="tag">Spice: ●●●</span>
+                </div>
+              </div>
+
+              <div class="itemRight">
+                <div class="price">₹200</div>
+                <div class="qty">
+                  <button class="minus" type="button">−</button>
+                  <span>1</span>
+                  <button class="plus" type="button">+</button>
+                </div>
+                <button class="removeBtn" type="button">Remove</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 3 -->
+          <article class="cartItem" data-price="35">
+            <div class="thumb">
+              <img src="assets/dishes/coffee" alt="Filter Coffee">
+            </div>
+
+            <div class="itemMain">
+              <div class="itemTitle">
+                <b>Filter Coffee</b>
+                <small>Strong decoction • Hot</small>
+                <div class="meta">
+                  <span class="tag veg">Veg</span>
+                  <span class="tag">Classic</span>
+                </div>
+              </div>
+
+              <div class="itemRight">
+                <div class="price">₹35</div>
+                <div class="qty">
+                  <button class="minus" type="button">−</button>
+                  <span>2</span>
+                  <button class="plus" type="button">+</button>
+                </div>
+                <button class="removeBtn" type="button">Remove</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Summary -->
+      <aside class="card summary" aria-label="Cart summary">
+        <h2>Bill Details</h2>
+
+        <div class="line">
+          <div>Subtotal</div>
+          <div id="subtotal">₹0</div>
+        </div>
+
+        <div class="line">
+          <div>GST (5%)</div>
+          <div id="gst">₹0</div>
+        </div>
+
+        <div class="line">
+          <div>Delivery Fee</div>
+          <div id="delivery">₹0</div>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="total">
+          <div>Total</div>
+          <div id="total">₹0</div>
+        </div>
+
+        <a class="btn primary checkoutBtn" href="checkout.html">Proceed to Checkout</a>
+
+        <div class="note">
+          This cart system is a UI prototype. Total is calculated using basic JavaScript only.
+        </div>
+      </aside>
+    </section>
+
+    <footer class="footer">
+      <p>© Kudil Suvai • Cart management</p>
+    </footer>
+
+  </main>
+
+  <script src="js/totals.js"></script>
+</body>
+</html>

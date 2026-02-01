@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kudil Suvai • Register</title>
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="header">
+    <div class="container topbar">
+      <a class="brand" href="index.html">
+        <div class="logoMark"></div>
+        <div class="brandText">
+          <b>Kudil Suvai</b>
+          <small>Erode • Perundurai Road</small>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="cart.html">Cart</a>
+        <a class="navBtn active" href="register.html">Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="authWrap">
+    <section class="card authCard" aria-label="Register section">
+
+      <div class="authLeft">
+        <span class="pill">Create account • Faster checkout</span>
+        <h1>Your table is ready.</h1>
+        <p>
+          Create your Kudil Suvai account to save address details and
+          checkout faster. This is a portfolio prototype UI.
+        </p>
+
+        <div class="miniStats">
+          <div class="miniStat">
+            <b>Saved address</b>
+            <span>Checkout faster</span>
+          </div>
+          <div class="miniStat">
+            <b>Order history</b>
+            <span>Track past orders</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="authRight">
+        <h2>Create account</h2>
+        <p>Register with your details.</p>
+
+        <form class="form" action="login.html" method="get">
+          <div class="row2">
+            <div>
+              <label class="label" for="fname">First name</label>
+              <input class="input" id="fname" name="fname" type="text" required placeholder="Sastika">
+            </div>
+            <div>
+              <label class="label" for="lname">Last name</label>
+              <input class="input" id="lname" name="lname" type="text" required placeholder="(optional)">
+            </div>
+          </div>
+
+          <div class="row2">
+            <div>
+              <label class="label" for="mobile">Mobile</label>
+              <input class="input" id="mobile" name="mobile" type="tel" required placeholder="9876543210" pattern="[0-9]{10}">
+            </div>
+            <div>
+              <label class="label" for="email">Email</label>
+              <input class="input" id="email" name="email" type="email" required placeholder="name@mail.com">
+            </div>
+          </div>
+
+          <div>
+            <label class="label" for="pass">Password</label>
+            <input class="input" id="pass" name="pass" type="password" required placeholder="Minimum 8 characters">
+          </div>
+
+          <button class="btn primary" type="submit">Create Account</button>
+
+          <div class="formFooter">
+            <span class="helper">Already registered? <a href="login.html">Sign in</a></span>
+          </div>
+        </form>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© Kudil Suvai • Account registration</p>
+    </div>
+  </footer>
+
+</body>
+</html>

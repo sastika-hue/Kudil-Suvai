@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kudil Suvai • Login</title>
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="header">
+    <div class="container topbar">
+      <a class="brand" href="index.html">
+        <div class="logoMark"></div>
+        <div class="brandText">
+          <b>Kudil Suvai</b>
+          <small>Erode • Perundurai Road</small>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="cart.html">Cart</a>
+        <a class="navBtn active" href="login.html">Sign in</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="authWrap">
+    <section class="card authCard" aria-label="Login section">
+
+      <div class="authLeft">
+        <span class="pill">Secure sign in • Customer portal</span>
+        <h1>Welcome back.</h1>
+        <p>
+          Sign in to continue ordering from Kudil Suvai.
+          Your cart and address details stay ready for checkout.
+        </p>
+
+        <div class="miniStats">
+          <div class="miniStat">
+            <b>25–40 mins</b>
+            <span>Fast delivery</span>
+          </div>
+          <div class="miniStat">
+            <b>Live cart</b>
+            <span>Total calculated instantly</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="authRight">
+        <h2>Sign in</h2>
+        <p>Use your registered credentials.</p>
+
+        <form class="form" action="menu.html" method="get">
+          <div>
+            <label class="label" for="email">Email / Mobile</label>
+            <input class="input" id="email" name="email" type="text" required placeholder="example@mail.com or 9876543210">
+          </div>
+
+          <div>
+            <label class="label" for="pass">Password</label>
+            <input class="input" id="pass" name="pass" type="password" required placeholder="••••••••">
+          </div>
+
+          <button class="btn primary" type="submit">Continue</button>
+
+          <div class="formFooter">
+            <span class="helper">New here? <a href="register.html">Create account</a></span>
+            <span class="helper"><a href="#">Forgot password?</a></span>
+          </div>
+        </form>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© Kudil Suvai • Secure login</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kudil Suvai • Order Confirmed</title>
+
+  <link rel="stylesheet" href="css/base.css" />
+
+  <style>
+    .wrap{
+      min-height: calc(100vh - 82px);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 2.2rem 0;
+    }
+
+    .box{
+      width: min(880px, 92vw);
+      padding: 1.4rem;
+    }
+
+    .status{
+      display:flex;
+      justify-content:space-between;
+      gap: 1rem;
+      flex-wrap:wrap;
+      align-items:flex-start;
+      margin-bottom: .9rem;
+    }
+
+    .okPill{
+      display:inline-flex;
+      align-items:center;
+      gap:.55rem;
+      padding:.5rem .85rem;
+      border-radius:999px;
+      border:1px solid rgba(19,182,176,.30);
+      background: rgba(19,182,176,.12);
+      color: rgba(255,255,255,.88);
+      font-weight: 900;
+      letter-spacing:.2px;
+      font-size:.9rem;
+    }
+
+    .title{
+      margin: .4rem 0 0;
+      font-size: clamp(1.9rem, 3vw, 2.5rem);
+      letter-spacing: -.4px;
+      line-height: 1.12;
+    }
+
+    .sub{
+      margin: .65rem 0 0;
+      color: var(--muted);
+      max-width: 70ch;
+      font-size: 1.02rem;
+      line-height: 1.65;
+    }
+
+    .grid{
+      margin-top: 1.2rem;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .9rem;
+    }
+
+    .mini{
+      padding: 1rem;
+      border-radius: 20px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+    }
+
+    .mini b{
+      display:block;
+      font-size: .95rem;
+      color: rgba(255,255,255,.88);
+      letter-spacing: -.1px;
+    }
+
+    .mini span{
+      display:block;
+      margin-top: .35rem;
+      color: var(--muted);
+      font-size: .92rem;
+      font-weight: 600;
+    }
+
+    .cta{
+      margin-top: 1.35rem;
+      display:flex;
+      gap:.75rem;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    .tip{
+      margin-top: 1.1rem;
+      padding: .95rem 1rem;
+      border-radius: 20px;
+      border:1px solid rgba(241,231,214,.20);
+      background: rgba(241,231,214,.08);
+      color: rgba(255,255,255,.78);
+      font-size: .92rem;
+      line-height: 1.6;
+    }
+
+    @media(max-width: 760px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="header">
+    <div class="container topbar">
+      <a class="brand" href="index.html">
+        <div class="logoMark"></div>
+        <div class="brandText">
+          <b>Kudil Suvai</b>
+          <small>Erode • Perundurai Road</small>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="cart.html">Cart</a>
+        <a class="active" href="success.html">Success</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card box" aria-label="Order confirmed">
+
+      <div class="status">
+        <span class="okPill">✅ ORDER CONFIRMED</span>
+        <span class="badge">Delivery: 25–40 mins</span>
+      </div>
+
+      <h1 class="title">Your order is placed successfully.</h1>
+      <p class="sub">
+        Kudil Suvai has received your order and the kitchen has started preparation.
+        This page is part of a portfolio-ready ordering system prototype.
+      </p>
+
+      <div class="grid">
+        <div class="mini">
+          <b>Order ID</b>
+          <span>KSV-ERD-2026-0018</span>
+        </div>
+
+        <div class="mini">
+          <b>Status</b>
+          <span>Preparing</span>
+        </div>
+
+        <div class="mini">
+          <b>Delivery Location</b>
+          <span>Erode • Perundurai Road</span>
+        </div>
+
+        <div class="mini">
+          <b>Payment</b>
+          <span>Selected method (demo)</span>
+        </div>
+      </div>
+
+      <div class="cta">
+        <a class="btn primary" href="menu.html">Order More</a>
+        <a class="btn" href="cart.html">View Cart</a>
+        <a class="btn" href="index.html">Back to Home</a>
+      </div>
+
+        <p class="tip">
+            Tip: You can track your order status in real-time from the home page
+            once logged in. Thank you for choosing Kudil Suvai!
+        </p>
+        
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© Kudil Suvai • Order confirmation</p>
+    </div>
+  </footer>
+
+</body>
+</html>

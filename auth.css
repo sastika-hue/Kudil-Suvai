@@ -1,0 +1,134 @@
+/* auth.css */
+
+.authWrap{
+  min-height: calc(100vh - 82px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 2.2rem 0;
+}
+
+.authCard{
+  width: min(980px, 92vw);
+  overflow:hidden;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.authLeft{
+  padding: 1.6rem;
+  border-right: 1px solid rgba(255,255,255,.10);
+  background:
+    radial-gradient(circle at 25% 30%, rgba(19,182,176,.22), transparent 48%),
+    radial-gradient(circle at 80% 35%, rgba(241,231,214,.16), transparent 45%),
+    rgba(0,0,0,.16);
+}
+
+.authLeft .pill{
+  display:inline-flex;
+  gap:.5rem;
+  align-items:center;
+  padding:.45rem .8rem;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.18);
+  color: rgba(255,255,255,.78);
+  font-weight: 800;
+  font-size:.86rem;
+}
+
+.authLeft h1{
+  margin:.9rem 0 0;
+  font-size: 2rem;
+  letter-spacing: -.4px;
+  line-height: 1.1;
+}
+
+.authLeft p{
+  margin:.75rem 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 52ch;
+}
+
+.miniStats{
+  margin-top: 1.2rem;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .8rem;
+}
+
+.miniStat{
+  padding: .85rem;
+  border-radius: 18px;
+  border:1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.05);
+}
+
+.miniStat b{
+  display:block;
+  font-size: 1.05rem;
+}
+.miniStat span{
+  display:block;
+  margin-top:.25rem;
+  color: var(--muted);
+  font-size:.9rem;
+  font-weight: 600;
+}
+
+.authRight{
+  padding: 1.6rem;
+  background: rgba(255,255,255,.04);
+}
+
+.authRight h2{
+  margin:0;
+  font-size: 1.25rem;
+  letter-spacing: -.2px;
+}
+
+.authRight p{
+  margin:.45rem 0 0;
+  color: var(--muted);
+}
+
+.form{
+  margin-top: 1.05rem;
+  display:grid;
+  gap:.85rem;
+}
+
+.row2{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .75rem;
+}
+
+.formFooter{
+  margin-top: .35rem;
+  display:flex;
+  justify-content:space-between;
+  gap: 1rem;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.helper{
+  color: var(--muted);
+  font-size:.92rem;
+  font-weight: 600;
+}
+
+.helper a{
+  color: rgba(241,231,214,.92);
+  font-weight: 800;
+}
+
+@media(max-width: 900px){
+  .authCard{ grid-template-columns: 1fr; }
+  .authLeft{ border-right:none; border-bottom: 1px solid rgba(255,255,255,.10); }
+}
+@media(max-width: 520px){
+  .row2{ grid-template-columns: 1fr; }
+}

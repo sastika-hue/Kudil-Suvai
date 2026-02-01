@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kudil Suvai • Erode</title>
+
+  <link rel="stylesheet" href="css/base.css" />
+
+  <style>
+    /* Home only styles */
+    .hero{
+      margin-top: 1.25rem;
+      padding: 1.4rem;
+      border-radius: 26px;
+      border: 1px solid rgba(255,255,255,.10);
+      background:
+        radial-gradient(circle at 20% 25%, rgba(19,182,176,.20), transparent 45%),
+        radial-gradient(circle at 85% 35%, rgba(241,231,214,.14), transparent 40%),
+        rgba(255,255,255,.05);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 1.2rem;
+      align-items:center;
+    }
+
+    .pill{
+      display:inline-flex;
+      gap:.5rem;
+      align-items:center;
+      padding:.45rem .8rem;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.18);
+      color: rgba(255,255,255,.78);
+      font-weight: 800;
+      font-size:.86rem;
+    }
+
+    .hero h1{
+      margin:.8rem 0 0;
+      font-size: clamp(2rem, 3vw, 2.65rem);
+      line-height: 1.08;
+      letter-spacing: -.5px;
+    }
+
+    .hero p{
+      margin:.75rem 0 0;
+      color: var(--muted);
+      max-width: 62ch;
+      font-size: 1.02rem;
+      line-height: 1.6;
+    }
+
+    .heroCtas{
+      margin-top: 1.1rem;
+      display:flex;
+      gap:.75rem;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    /* Search */
+    .searchPanel{
+      padding: 1.15rem;
+      border-radius: 24px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.18);
+      box-shadow: 0 22px 60px rgba(0,0,0,.35);
+    }
+
+    .searchPanel h3{
+      margin:0;
+      font-size: 1.05rem;
+      letter-spacing: -.2px;
+    }
+
+    .searchPanel p{
+      margin:.35rem 0 0;
+      color: var(--muted);
+      font-size:.92rem;
+    }
+
+    .searchRow{
+      margin-top: .85rem;
+      display:flex;
+      gap:.65rem;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .searchRow input{
+      flex: 1;
+      min-width: 220px;
+    }
+
+    /* Category grid */
+    .section{
+      margin-top: 1.35rem;
+    }
+
+    .secTitle{
+      display:flex;
+      justify-content:space-between;
+      gap:1rem;
+      align-items:flex-end;
+      margin-bottom: .75rem;
+    }
+    .secTitle h2{
+      margin:0;
+      font-size: 1.2rem;
+    }
+    .secTitle span{
+      color: var(--muted);
+      font-size:.95rem;
+      font-weight: 700;
+    }
+
+    .catGrid{
+      display:grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: .9rem;
+    }
+
+    .catCard{
+      padding: .85rem .75rem;
+      border-radius: 22px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap: .6rem;
+      transition: transform .15s ease, border-color .15s ease;
+    }
+    .catCard:hover{
+      transform: translateY(-3px);
+      border-color: rgba(19,182,176,.35);
+    }
+
+    .catIcon{
+      width: 66px;
+      height: 66px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.16);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+
+    .catIcon img{
+      width: 80%;
+      height: 80%;
+      object-fit: cover;
+    }
+
+    .catCard b{
+      font-size:.92rem;
+      letter-spacing: -.1px;
+    }
+
+    /* Featured dishes */
+    .dishRow{
+      display:grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 1rem;
+    }
+
+    .dish{
+      border-radius: 24px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+      overflow:hidden;
+      transition: transform .15s ease, border-color .15s ease;
+    }
+    .dish:hover{
+      transform: translateY(-4px);
+      border-color: rgba(19,182,176,.35);
+    }
+
+    .dishImg{
+      height: 160px;
+      background: rgba(0,0,0,.20);
+    }
+    .dishImg img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      display:block;
+    }
+
+    .dishBody{
+      padding: .9rem;
+    }
+    .dishBody h3{
+      margin:0;
+      font-size: 1.02rem;
+    }
+    .dishBody p{
+      margin:.35rem 0 0;
+      color: var(--muted);
+      font-size: .92rem;
+      min-height: 38px;
+    }
+    .dishFoot{
+      margin-top:.8rem;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:.7rem;
+    }
+    .price{
+      font-weight: 900;
+      color: rgba(241,231,214,.92);
+    }
+
+    @media(max-width: 1000px){
+      .heroGrid{ grid-template-columns: 1fr; }
+      .catGrid{ grid-template-columns: repeat(3,1fr); }
+      .dishRow{ grid-template-columns: repeat(2,1fr); }
+    }
+
+    @media(max-width: 520px){
+      .catGrid{ grid-template-columns: repeat(2,1fr); }
+      .dishRow{ grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="header">
+    <div class="container topbar">
+
+      <a class="brand" href="index.html" aria-label="Kudil Suvai Home">
+        <div class="logoMark"></div>
+        <div class="brandText">
+          <b>Kudil Suvai</b>
+          <small>Erode • Perundurai Road</small>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a class="active" href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="cart.html">Cart</a>
+        <a class="navBtn" href="login.html">Sign in</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Home hero">
+      <div class="heroGrid">
+        <div>
+          <span class="pill">Single Restaurant Ordering • Premium Experience</span>
+          <h1>Authentic Kudil flavours, delivered across Erode.</h1>
+          <p>
+            Order curated South Indian plates, Indo-Chinese wok favourites, and desserts —
+            prepared fresh. Real dish photos. Clean ordering.
+          </p>
+
+          <div class="heroCtas">
+            <a class="btn primary" href="menu.html">Browse Menu</a>
+            <a class="btn" href="register.html">Create Account</a>
+            <span class="badge">Delivery: 25–40 mins</span>
+          </div>
+        </div>
+
+        <aside class="searchPanel" aria-label="Search">
+          <h3>Find your dish</h3>
+          <p>Search by item name. (UI demo, menu is categorized)</p>
+
+          <div class="searchRow">
+            <input class="input" type="search" placeholder="Try: dosa, fried rice, coffee..." />
+            <a class="btn primary" href="menu.html">Search</a>
+          </div>
+
+          <div style="margin-top:.85rem;display:flex;gap:.5rem;flex-wrap:wrap;">
+            <span class="badge">Veg</span>
+            <span class="badge">Non-Veg</span>
+            <span class="badge">Bestsellers</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="section" aria-label="Categories">
+      <div class="secTitle">
+        <h2>Explore Categories</h2>
+        <span>Pick what you feel like today</span>
+      </div>
+
+      <div class="catGrid">
+        <a class="catCard" href="menu.html#tiffin">
+          <div class="catIcon"><img src="assets/categories/tiffin.jpg" alt="Tiffin"></div>
+          <b>Tiffin</b>
+        </a>
+
+        <a class="catCard" href="menu.html#meals">
+          <div class="catIcon"><img src="assets/categories/meals.jpg" alt="Meals"></div>
+          <b>Meals</b>
+        </a>
+
+        <a class="catCard" href="menu.html#starters">
+          <div class="catIcon"><img src="assets/categories/starters.jpg" alt="Starters"></div>
+          <b>Starters</b>
+        </a>
+
+        <a class="catCard" href="menu.html#wok">
+          <div class="catIcon"><img src="assets/categories/wok.jpg" alt="Wok"></div>
+          <b>Wok</b>
+        </a>
+
+        <a class="catCard" href="menu.html#beverages">
+          <div class="catIcon"><img src="assets/categories/beverages.jpg" alt="Beverages"></div>
+          <b>Drinks</b>
+        </a>
+
+        <a class="catCard" href="menu.html#desserts">
+          <div class="catIcon"><img src="assets/categories/desserts.jpg" alt="Desserts"></div>
+          <b>Desserts</b>
+        </a>
+      </div>
+    </section>
+
+    <!-- FEATURED -->
+    <section class="section" aria-label="Featured items">
+      <div class="secTitle">
+        <h2>Today’s Picks</h2>
+        <span>House favourites</span>
+      </div>
+
+      <div class="dishRow">
+        <article class="dish">
+          <div class="dishImg"><img src="assets/dishes/masaladosa.jpg" alt="Masala Dosa"></div>
+          <div class="dishBody">
+            <h3>Masala Dosa</h3>
+            <p>Crisp roast with potato masala — classic Tamil comfort.</p>
+            <div class="dishFoot">
+              <span class="price">₹95</span>
+              <a class="btn primary" href="menu.html#tiffin">Order</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish">
+          <div class="dishImg"><img src="assets/dishes/chicken65.jpg" alt="Chicken 65"></div>
+          <div class="dishBody">
+            <h3>Chicken 65</h3>
+            <p>Spicy, crisp starter. The one that sells out fast.</p>
+            <div class="dishFoot">
+              <span class="price">₹200</span>
+              <a class="btn primary" href="menu.html#starters">Order</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish">
+          <div class="dishImg"><img src="assets/dishes/hakkanoodles.jpg" alt="Hakka Noodles"></div>
+          <div class="dishBody">
+            <h3>Hakka Noodles</h3>
+            <p>Smoky wok toss with garlic and sauce balance.</p>
+            <div class="dishFoot">
+              <span class="price">₹130</span>
+              <a class="btn primary" href="menu.html#wok">Order</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish">
+          <div class="dishImg"><img src="assets/dishes/brwnie.jpg" alt="Brownie"></div>
+          <div class="dishBody">
+            <h3>Brownie</h3>
+            <p>Dense chocolate dessert — perfect finish.</p>
+            <div class="dishFoot">
+              <span class="price">₹120</span>
+              <a class="btn primary" href="menu.html#desserts">Order</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© Kudil Suvai </p>
+    </footer>
+
+  </main>
+</body>
+</html>

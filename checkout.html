@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kudil Suvai • Checkout</title>
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/checkout.css" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="header">
+    <div class="container topbar">
+      <a class="brand" href="index.html">
+        <div class="logoMark"></div>
+        <div class="brandText">
+          <b>Kudil Suvai</b>
+          <small>Erode • Perundurai Road</small>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="cart.html">Cart</a>
+        <a class="active" href="checkout.html">Checkout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="checkHead">
+      <div>
+        <h1>Checkout</h1>
+        <p>Confirm delivery details and payment method.</p>
+      </div>
+      <span class="badge">Secure order flow (demo)</span>
+    </section>
+
+    <section class="checkLayout">
+
+      <!-- LEFT -->
+      <section class="card panel" aria-label="Checkout form">
+        <h2>Delivery Details</h2>
+
+        <form class="form" action="success.html" method="get">
+
+          <div class="row2">
+            <div>
+              <label class="label" for="name">Full Name</label>
+              <input class="input" id="name" name="name" type="text" required placeholder="Your name" />
+            </div>
+
+            <div>
+              <label class="label" for="mobile">Mobile</label>
+              <input class="input" id="mobile" name="mobile" type="tel" required placeholder="9876543210" pattern="[0-9]{10}" />
+            </div>
+          </div>
+
+          <div>
+            <label class="label" for="address">Address</label>
+            <input class="input" id="address" name="address" type="text" required placeholder="House No, Street, Area..." />
+          </div>
+
+          <div class="row2">
+            <div>
+              <label class="label" for="locality">Locality</label>
+              <input class="input" id="locality" name="locality" type="text" required placeholder="Perundurai Road, Erode" />
+            </div>
+            <div>
+              <label class="label" for="pincode">Pincode</label>
+              <input class="input" id="pincode" name="pincode" type="text" required placeholder="6380xx" />
+            </div>
+          </div>
+
+          <div>
+            <label class="label" for="slot">Delivery Slot</label>
+            <select class="select" id="slot" name="slot" required>
+              <option value="">Choose a slot</option>
+              <option>ASAP (25–40 mins)</option>
+              <option>In 1 hour</option>
+              <option>Tonight (7 PM – 9 PM)</option>
+            </select>
+          </div>
+
+          <div class="hr"></div>
+
+          <h2>Payment Method</h2>
+          <div class="payGrid">
+
+            <label class="payCard">
+              <input type="radio" name="pay" required />
+              <div>
+                <b>Cash on Delivery</b>
+                <small>Pay after delivery. Simple and fast.</small>
+              </div>
+            </label>
+
+            <label class="payCard">
+              <input type="radio" name="pay" required />
+              <div>
+                <b>UPI</b>
+                <small>GPay / PhonePe / Paytm (demo selection)</small>
+              </div>
+            </label>
+
+            <label class="payCard">
+              <input type="radio" name="pay" required />
+              <div>
+                <b>Card</b>
+                <small>Debit/Credit card (UI prototype only)</small>
+              </div>
+            </label>
+
+          </div>
+
+          <button class="btn primary placeBtn" type="submit">Place Order</button>
+
+          <div class="note">
+            Note: This is a portfolio prototype. Order placement redirects to confirmation page.
+          </div>
+
+        </form>
+      </section>
+
+      <!-- RIGHT -->
+      <aside class="card summary" aria-label="Order summary">
+        <h2>Order Summary</h2>
+
+        <div class="line">
+          <div>Subtotal</div>
+          <div>₹330</div>
+        </div>
+        <div class="line">
+          <div>GST (5%)</div>
+          <div>₹17</div>
+        </div>
+        <div class="line">
+          <div>Delivery Fee</div>
+          <div>₹0</div>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="total">
+          <div>Total</div>
+          <div>₹347</div>
+        </div>
+
+        
+    </section>
+
+    <footer class="footer">
+      <p>© Kudil Suvai • Checkout</p>
+    </footer>
+
+  </main>
+</body>
+</html>

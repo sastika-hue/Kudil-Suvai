@@ -1,0 +1,155 @@
+/* checkout.css */
+
+.checkHead{
+  margin-top: 1.2rem;
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+  align-items:flex-start;
+}
+
+.checkHead h1{
+  margin:0;
+  font-size: 1.6rem;
+  letter-spacing:-.25px;
+}
+
+.checkHead p{
+  margin:.35rem 0 0;
+  color: var(--muted);
+}
+
+.checkLayout{
+  margin-top: 1rem;
+  display:grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 1rem;
+  align-items:start;
+}
+
+.panel{
+  padding: 1.15rem;
+}
+
+.panel h2{
+  margin:0;
+  font-size: 1.15rem;
+}
+
+.form{
+  margin-top: 1rem;
+  display:grid;
+  gap: .85rem;
+}
+
+.row2{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .75rem;
+}
+
+.select{
+  width:100%;
+  padding:.9rem 1rem;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.14);
+  background: rgba(0,0,0,.20);
+  color: var(--text);
+  outline:none;
+}
+
+.hr{
+  margin: 1.05rem 0;
+  height:1px;
+  background: rgba(255,255,255,.10);
+}
+
+.payGrid{
+  margin-top:.85rem;
+  display:grid;
+  gap:.65rem;
+}
+
+.payCard{
+  display:flex;
+  gap:.75rem;
+  align-items:flex-start;
+  padding: .9rem 1rem;
+  border-radius: 20px;
+  border:1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.05);
+  transition: transform .15s ease, border-color .15s ease;
+}
+
+.payCard:hover{
+  transform: translateY(-2px);
+  border-color: rgba(19,182,176,.35);
+}
+
+.payCard input{
+  margin-top:.25rem;
+  accent-color: var(--teal);
+}
+
+.payCard b{
+  display:block;
+  font-size: .98rem;
+}
+
+.payCard small{
+  display:block;
+  margin-top:.2rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* Summary */
+.summary{
+  position: sticky;
+  top: 88px;
+  padding: 1.15rem;
+}
+
+.summary h2{
+  margin:0;
+  font-size: 1.15rem;
+}
+
+.line{
+  display:flex;
+  justify-content:space-between;
+  gap: 1rem;
+  margin-top: .7rem;
+  color: rgba(255,255,255,.82);
+}
+
+.total{
+  margin-top: .55rem;
+  display:flex;
+  justify-content:space-between;
+  font-weight: 950;
+  font-size: 1.07rem;
+}
+
+.placeBtn{
+  width:100%;
+  margin-top: 1rem;
+}
+
+.note{
+  margin-top: .9rem;
+  padding: .9rem 1rem;
+  border-radius: 18px;
+  border:1px solid rgba(241,231,214,.20);
+  background: rgba(241,231,214,.08);
+  color: rgba(255,255,255,.78);
+  font-size: .92rem;
+}
+
+@media(max-width: 980px){
+  .checkLayout{ grid-template-columns: 1fr; }
+  .summary{ position:relative; top:auto; }
+}
+@media(max-width: 520px){
+  .row2{ grid-template-columns: 1fr; }
+}
